@@ -17,7 +17,7 @@ class mytest(test):
 
 setup(
     name='django-branding',
-    version='0.0.1',
+    version='0.0.2',
     author='Alexandr Lispython',
     author_email='alex@dzone.me',
     url='http://github.com/Lispython/django-branding',
