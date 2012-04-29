@@ -7,7 +7,7 @@ Add branding headers to response.
 Requirements
 ============
 
-* Django >= 1.2
+* Django
 
 Installation
 ============
@@ -48,15 +48,15 @@ Example of headers on http://dzone.me
     {'cache-control': 'max-age=600',
     'connection': 'keep-alive',
     'content-language': 'ru-ru',
-     'content-length': '55239',
-     'content-type': 'text/html; charset=utf-8',
-     'date': 'Sun, 29 Apr 2012 12:51:12 GMT',
-     'expires': 'Sun, 29 Apr 2012 13:01:12 GMT',
-     'last-modified': 'Sun, 29 Apr 2012 12:51:12 GMT',
-     'link': '<dzone.me>; rel="platform"',
-     'server': 'Super Server',
-     'vary': 'Accept-Language, Cookie, Accept-Encoding',
-     'x-powered-by': 'D Zone',
-     'x-programming': 'Alex Lispython (alex@dzone.me, github.com/lispython)',
-     'x-revision': '5215de3',
-     'x-version': '20120311.0013-0'}
+    'content-length': '55239',
+    'content-type': 'text/html; charset=utf-8',
+    'date': 'Sun, 29 Apr 2012 12:51:12 GMT',
+    'expires': 'Sun, 29 Apr 2012 13:01:12 GMT',
+    'last-modified': 'Sun, 29 Apr 2012 12:51:12 GMT',
+    'link': '<dzone.me>; rel="platform"',
+    'server': 'Super Server',
+    'vary': 'Accept-Language, Cookie, Accept-Encoding',
+    'x-powered-by': 'D Zone',
+    'x-programming': 'Alex Lispython (alex@dzone.me, github.com/lispython)',
+    'x-revision': '5215de3',
+    'x-version': '20120311.0013-0'}
