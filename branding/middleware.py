@@ -3,7 +3,7 @@
 
 from logging import getLogger
 
-from settings as bsettings
+import settings as bsettings
 
 logger = getLogger('branding')
 
