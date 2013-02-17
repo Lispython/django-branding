@@ -3,7 +3,7 @@
 
 from logging import getLogger
 
-import settings as bsettings
+from django.conf import settings
 
 logger = getLogger('branding')
 
@@ -16,22 +16,32 @@ class BrandingMiddleware(object):
         """Add custom headers
         """
 
-        for key, value in bsettings.BRANDIND:
+        for key, value in getattr(settings, 'BRANDING', {}).iteritems():
             response[key] = value
 
-        if bsettings.programming:
+        platform = getattr(settings, "PLATFORM", None)
+        server = getattr(settings, "X_SERVER", None)
+        programming = getattr(settings, "X_PROGRAMMING", None)
+        site_name = getattr(settings, "SITE_NAME", None)
+        version = getattr(settings, 'VERSION', None)
+        revision = getattr(settings, 'REVISION', None)
+
+        if programming:
             response['X-Programming'] = programming
 
-        if bsettings.server:
+        if server:
             response['Server'] = server
 
-        if bsettings.site_name:
+        if platform:
+            response['Link'] = "<%s>; rel=\"platform\"" % platform
+
+        if site_name:
             response['X-Powered-By'] = site_name
 
-        if bsettings.version:
+        if version:
             response['X-Version'] = version
 
-        if bsettings.revision:
+        if revision:
             response['X-Revision'] = revision
 
         return response

@@ -16,8 +16,8 @@ class mytest(test):
         runtests()
 
 setup(
-    name='django-branding',
-    version='0.0.2',
+    name='django_branding',
+    version='0.0.6',
     author='Alexandr Lispython',
     author_email='alex@dzone.me',
     url='http://github.com/Lispython/django-branding',
